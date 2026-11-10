@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build
 
 # Serve static assets with Nginx.
-FROM nginx:1.27-alpine
+FROM nginx:1.31-alpine
 COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 # backend IP 漂移保活守护（40-backend-dns-watch.sh）：backend 容器重建换 IP 后自动
 # nginx -s reload，防止全 /api 长时间 502。必须显式 COPY——上一行的 COPY . . 只在
