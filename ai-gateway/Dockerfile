@@ -1,6 +1,6 @@
 # LANLink AI 网关沙盒镜像：OpenAI 兼容网关 + 本地知识库 RAG
 # 多阶段构建：test 阶段执行全量 pytest 质量门禁，runtime 阶段不携带测试与测试依赖。
-FROM python:3.12-alpine AS deps
+FROM python:3.15-alpine AS deps
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
