@@ -1,5 +1,5 @@
 # Build the Spring Boot backend.
-FROM maven:3.9.11-eclipse-temurin-17 AS build
+FROM maven:3.9-eclipse-temurin-26 AS build
 WORKDIR /workspace
 
 # Maven 镜像源：容器内直连 repo.maven.apache.org 会被宿主代理 fake-IP DNS 污染
